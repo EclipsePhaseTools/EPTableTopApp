@@ -27,7 +27,7 @@ jobs:
     
     # changes the base-tag in index.html from '/' to 'BlazorGitHubPagesDemo' to match GitHub Pages repository subdirectory
     - name: Change base-tag in index.html from / to EPTabletopApp
-      run: sed -i 's/<base href="\/" \/>/<base href="\/EPTabletopApp\/" \/>/g' release/wwwroot/index.html
+      run: sed -i 's/<base href="\/" \/>/<base href="\/EPTableTopApp\/" \/>/g' release/wwwroot/index.html
       
     # Add 404 handler
     - name: Copy index to 404
