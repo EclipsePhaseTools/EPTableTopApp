@@ -1,6 +1,6 @@
 {
-  "name": "EPTabletopApp.Blazor",
-  "short_name": "EPTabletopApp.Blazor",
+  "name": "EPTabletopApp",
+  "short_name": "EPTabletopApp",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",
