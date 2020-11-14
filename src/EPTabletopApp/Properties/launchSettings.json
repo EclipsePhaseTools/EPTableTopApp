@@ -16,7 +16,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "EpTabletopApp": {
+    "EPTabletopApp": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,
