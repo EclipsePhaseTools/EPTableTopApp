@@ -1,0 +1,58 @@
+﻿<table>
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Rank</td>
+            <td>Apt</td>
+            <td>Mod</td>
+            <td>Total</td>
+        </tr>
+    </thead>
+    <tbody>
+        @if (character?.CharacterSkills != null)
+        {
+            foreach (var skill in character.CharacterSkills)
+            {
+                <tr>
+                    
+                    <td>
+                        @if (skill.IsStandard)
+                        {
+                            <span>@skill.Name</span>
+                        }
+                        else
+                        {
+                            <input @bind-value="skill.Name" @bind-value:event="oninput" />
+                        }
+                    </td>
+                    <td><input @bind-value="skill.Rank" @bind-value:event="oninput" /></td>
+                    <td>
+                        @if (skill.IsStandard)
+                        {
+                            <span>@skill.Aptitude</span>
+                        }
+                        else
+                        {
+                            <input @bind-value="skill.Aptitude" @bind-value:event="oninput" />
+                        }
+                    </td>
+                    <td><input @bind-value="skill.Modifier" @bind-value:event="oninput" /></td>
+                    <td><span>@(skill.Rank + skill.Modifier)</span></td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+
+@code {
+
+    [CascadingParameter(Name = "character")]
+    EPTools.Models.Character character { get; set; }
+
+    public void RollSkill(string name, int total)
+    {
+
+    }
+
+}

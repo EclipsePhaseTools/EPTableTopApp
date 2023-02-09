@@ -1,0 +1,90 @@
+﻿<div class="card">
+    <div class="card-header text-center">
+        General Info
+    </div>
+    <div class="card-body container">
+        <div class="row">
+            <div class="col-sm">
+                <label>
+                    Name
+                </label>
+                <input type="text" @bind-value="character.Name" @bind-value:event="oninput"/>
+            </div>
+            <div class="col-sm">
+                <label>
+                    Aliases
+                </label>
+                <input type="text" @bind-value="character.Aliases" @bind-value:event="oninput"/>
+            </div>
+            <div class="col-sm">
+                <label>
+                    Forks
+                </label>
+                <input type="text" @bind-value="character.Name" @bind-value:event="oninput" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm">
+                <label>
+                    Background
+                </label>
+                <input type="text" @bind-value="character.Background" @bind-value:event="oninput"/>
+            </div>
+            <div class="col-sm">
+                <label>
+                    Career
+                </label>
+                <input type="text" @bind-value="character.Career" @bind-value:event="oninput"/>
+            </div>
+            <div class="col-sm">
+                <label>
+                    Interest
+                </label>
+                <input type="text" @bind-value="character.Interest" @bind-value:event="oninput"/>
+            </div>
+            <div class="col-sm">
+                <label>
+                    Faction
+                </label>
+                <input type="text" @bind-value="character.Faction" @bind-value:event="oninput"/>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm">
+                <label>
+                    Languages
+                </label>
+                <input type="text" @bind-value="character.Languages" @bind-value:event="oninput"/>
+            </div>
+            <div class="col-sm">
+                <label>
+                    Motivations
+                </label>
+                <input type="text" @bind-value="character.Motivations" @bind-value:event="oninput"/>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm">
+                <label>
+                    Webhook URL
+                </label>
+                <input type="text" @bind-value="character.DiscordHook" @bind-value:event="oninput"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+@code {
+    [CascadingParameter(Name = "character")]
+    private Models.Character character { get; set; }
+
+
+
+}
